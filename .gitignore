@@ -13,3 +13,24 @@
 
 # Dependency directories (remove the comment below to include it)
 # vendor/
+# dependencies
+frontend-react-personalidades-master/node_modules
+frontend-react-personalidades-master/.pnp
+frontend-react-personalidades-master/.pnp.js
+
+# testing
+frontend-react-personalidades-master/coverage
+
+# production
+frontend-react-personalidades-master/build
+
+# misc
+frontend-react-personalidades-master/.DS_Store
+frontend-react-personalidades-master/.env.local
+frontend-react-personalidades-master/.env.development.local
+frontend-react-personalidades-master/.env.test.local
+frontend-react-personalidades-master/.env.production.local
+
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*

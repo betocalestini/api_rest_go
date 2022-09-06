@@ -2,20 +2,19 @@ package main
 
 import (
 	"fmt"
-	"log"
-	"net/http"
+
+	"github.com/betocalestini/api_rest_go/database"
+	"github.com/betocalestini/api_rest_go/models"
+	"github.com/betocalestini/api_rest_go/routes"
 )
 
 func main() {
+
+	models.Personalidades = []models.Personalidade{
+		{Id: 1, Nome: "nome 1", Historia: "historia 1"},
+		{Id: 2, Nome: "nome 2", Historia: "historia 2"},
+	}
+	database.ConectaComBancoDeDados()
 	fmt.Println("Servidor go rodando")
-	HandleRequest()
-}
-
-func Home(w http.ResponseWriter, r *http.Request) {
-	fmt.Fprint(w, "Home page")
-}
-
-func HandleRequest() {
-	http.HandleFunc("/", Home)
-	log.Fatal(http.ListenAndServe(":8080", nil))
+	routes.HandleRequest()
 }
